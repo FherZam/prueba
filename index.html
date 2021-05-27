@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    
+    <div id="app" class="demo">
+        <h3 v-once>{{ message }}</h3>
+        <span v-if="verContador">Counter: {{ counter }}        
+        </span>
+        <button v-on:click="verContador = !verContador">Contador</button>
+        
+        <br>
+        <p v-html="messageHTML"></p>
+        
+        <br><br>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+        <p> {{ message }} </p>
+        <input v-model="message"/>
+        
+        <ol><li v-for="empleado in Empleados"> {{ empleado.name }} </li></ol>
+        <ul>
+            <li v-for="empleado in Empleados"> {{ empleado.name }} </li>
+        </ul>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
